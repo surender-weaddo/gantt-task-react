@@ -265,7 +265,7 @@ var getDaysInMonth = function getDaysInMonth(month, year) {
   return new Date(year, month + 1, 0).getDate();
 };
 
-var styles = {"ganttTable":"_task-list-header-module__ganttTable__3_ygE","ganttTable_Header":"_task-list-header-module__ganttTable_Header__1nBOt","ganttTable_HeaderSeparator":"_task-list-header-module__ganttTable_HeaderSeparator__2eZzQ","ganttTable_HeaderItem":"_task-list-header-module__ganttTable_HeaderItem__WuQ0f"};
+var styles = {"ganttTable":"_3_ygE","ganttTable_Header":"_1nBOt","ganttTable_HeaderSeparator":"_2eZzQ","ganttTable_HeaderItem":"_WuQ0f"};
 
 var TaskListHeaderDefault = function TaskListHeaderDefault(_ref) {
   var headerHeight = _ref.headerHeight,
@@ -313,7 +313,7 @@ var TaskListHeaderDefault = function TaskListHeaderDefault(_ref) {
   }, "\xA0To")));
 };
 
-var styles$1 = {"taskListWrapper":"_task-list-table-module__taskListWrapper__3ZbQT","taskListTableRow":"_task-list-table-module__taskListTableRow__34SS0","taskListCell":"_task-list-table-module__taskListCell__3lLk3","taskListNameWrapper":"_task-list-table-module__taskListNameWrapper__nI1Xw","taskListExpander":"_task-list-table-module__taskListExpander__2QjE6","taskListEmptyExpander":"_task-list-table-module__taskListEmptyExpander__2TfEi"};
+var styles$1 = {"taskListWrapper":"_3ZbQT","taskListTableRow":"_34SS0","taskListCell":"_3lLk3","taskListNameWrapper":"_nI1Xw","taskListExpander":"_2QjE6","taskListEmptyExpander":"_2TfEi"};
 
 var localeDateStringCache = {};
 
@@ -399,7 +399,7 @@ var TaskListTableDefault = function TaskListTableDefault(_ref) {
   }));
 };
 
-var styles$2 = {"tooltipDefaultContainer":"_tooltip-module__tooltipDefaultContainer__3T42e","tooltipDefaultContainerParagraph":"_tooltip-module__tooltipDefaultContainerParagraph__29NTg","tooltipDetailsContainer":"_tooltip-module__tooltipDetailsContainer__25P-K","tooltipDetailsContainerHidden":"_tooltip-module__tooltipDetailsContainerHidden__3gVAq"};
+var styles$2 = {"tooltipDefaultContainer":"_3T42e","tooltipDefaultContainerParagraph":"_29NTg","tooltipDetailsContainer":"_25P-K","tooltipDetailsContainerHidden":"_3gVAq"};
 
 var Tooltip = function Tooltip(_ref) {
   var task = _ref.task,
@@ -507,7 +507,7 @@ var StandardTooltipContent = function StandardTooltipContent(_ref2) {
   }, !!task.progress && "Progress: " + task.progress + " %"));
 };
 
-var styles$3 = {"scroll":"_vertical-scroll-module__scroll__1eT-t"};
+var styles$3 = {"scroll":"_1eT-t"};
 
 var VerticalScroll = function VerticalScroll(_ref) {
   var scroll = _ref.scroll,
@@ -591,7 +591,7 @@ var TaskList = function TaskList(_ref) {
   }, React__default.createElement(TaskListTable, Object.assign({}, tableProps))));
 };
 
-var styles$4 = {"gridRow":"_grid-module__gridRow__2dZTy","gridRowLine":"_grid-module__gridRowLine__3rUKi","gridTick":"_grid-module__gridTick__RuwuK"};
+var styles$4 = {"gridRow":"_2dZTy","gridRowLine":"_3rUKi","gridTick":"_RuwuK"};
 
 var GridBody = function GridBody(_ref) {
   var tasks = _ref.tasks,
@@ -600,6 +600,7 @@ var GridBody = function GridBody(_ref) {
       svgWidth = _ref.svgWidth,
       columnWidth = _ref.columnWidth,
       todayColor = _ref.todayColor,
+      weekendColor = _ref.weekendColor,
       rtl = _ref.rtl;
   var y = 0;
   var gridRows = [];
@@ -635,6 +636,7 @@ var GridBody = function GridBody(_ref) {
 
   var now = new Date();
   var tickX = 0;
+  var weekends = [];
   var ticks = [];
   var today = React__default.createElement("rect", null);
 
@@ -648,6 +650,17 @@ var GridBody = function GridBody(_ref) {
       y2: y,
       className: styles$4.gridTick
     }));
+
+    if (weekendColor !== "transparent" && dates[i + 1] && [0, 6].includes(dates[i + 1].getDay())) {
+      weekends.push(React__default.createElement("rect", {
+        key: "WeekendColumn" + i,
+        x: tickX + columnWidth,
+        y: 0,
+        width: columnWidth,
+        height: y,
+        fill: weekendColor
+      }));
+    }
 
     if (i + 1 !== dates.length && date.getTime() < now.getTime() && dates[i + 1].getTime() >= now.getTime() || i !== 0 && i + 1 === dates.length && date.getTime() < now.getTime() && addToDate(date, date.getTime() - dates[i - 1].getTime(), "millisecond").getTime() >= now.getTime()) {
       today = React__default.createElement("rect", {
@@ -682,7 +695,9 @@ var GridBody = function GridBody(_ref) {
     className: "ticks"
   }, ticks), React__default.createElement("g", {
     className: "today"
-  }, today));
+  }, today), React__default.createElement("g", {
+    className: "weekends"
+  }, weekends));
 };
 
 var Grid = function Grid(props) {
@@ -691,7 +706,7 @@ var Grid = function Grid(props) {
   }, React__default.createElement(GridBody, Object.assign({}, props)));
 };
 
-var styles$5 = {"calendarBottomText":"_calendar-module__calendarBottomText__9w8d5","calendarTopTick":"_calendar-module__calendarTopTick__1rLuZ","calendarTopText":"_calendar-module__calendarTopText__2q1Kt","calendarHeader":"_calendar-module__calendarHeader__35nLX"};
+var styles$5 = {"calendarBottomText":"_9w8d5","calendarTopTick":"_1rLuZ","calendarTopText":"_2q1Kt","calendarHeader":"_35nLX"};
 
 var TopPartOfCalendar = function TopPartOfCalendar(_ref) {
   var value = _ref.value,
@@ -1570,7 +1585,7 @@ var sortTasks = function sortTasks(taskA, taskB) {
   }
 };
 
-var styles$6 = {"barWrapper":"_bar-module__barWrapper__KxSXS","barHandle":"_bar-module__barHandle__3w_5u","barBackground":"_bar-module__barBackground__31ERP"};
+var styles$6 = {"barWrapper":"_KxSXS","barHandle":"_3w_5u","barBackground":"_31ERP"};
 
 var BarDisplay = function BarDisplay(_ref) {
   var x = _ref.x,
@@ -1729,7 +1744,7 @@ var BarSmall = function BarSmall(_ref) {
   })));
 };
 
-var styles$7 = {"milestoneWrapper":"_milestone-module__milestoneWrapper__RRr13","milestoneBackground":"_milestone-module__milestoneBackground__2P2B1"};
+var styles$7 = {"milestoneWrapper":"_RRr13","milestoneBackground":"_2P2B1"};
 
 var Milestone = function Milestone(_ref) {
   var task = _ref.task,
@@ -1761,7 +1776,7 @@ var Milestone = function Milestone(_ref) {
   }));
 };
 
-var styles$8 = {"projectWrapper":"_project-module__projectWrapper__1KJ6x","projectBackground":"_project-module__projectBackground__2RbVy","projectTop":"_project-module__projectTop__2pZMF"};
+var styles$8 = {"projectWrapper":"_1KJ6x","projectBackground":"_2RbVy","projectTop":"_2pZMF"};
 
 var Project = function Project(_ref) {
   var task = _ref.task,
@@ -1811,7 +1826,7 @@ var Project = function Project(_ref) {
   }));
 };
 
-var style = {"barLabel":"_task-list-module__barLabel__3zRJQ","barLabelOutside":"_task-list-module__barLabelOutside__3KcaM"};
+var style = {"barLabel":"_3zRJQ","barLabelOutside":"_3KcaM"};
 
 var TaskItem = function TaskItem(props) {
   var _props = _extends({}, props),
@@ -2173,7 +2188,7 @@ var TaskGanttContent = function TaskGanttContent(_ref) {
   })));
 };
 
-var styles$9 = {"ganttVerticalContainer":"_gantt-module__ganttVerticalContainer__CZjuD","horizontalContainer":"_gantt-module__horizontalContainer__2B2zv","wrapper":"_gantt-module__wrapper__3eULf"};
+var styles$9 = {"ganttVerticalContainer":"_CZjuD","horizontalContainer":"_2B2zv","wrapper":"_3eULf"};
 
 var TaskGantt = function TaskGantt(_ref) {
   var gridProps = _ref.gridProps,
@@ -2227,7 +2242,7 @@ var TaskGantt = function TaskGantt(_ref) {
   }, React__default.createElement(Grid, Object.assign({}, gridProps)), React__default.createElement(TaskGanttContent, Object.assign({}, newBarProps)))));
 };
 
-var styles$a = {"scrollWrapper":"_horizontal-scroll-module__scrollWrapper__2k9Ys","scroll":"_horizontal-scroll-module__scroll__19jgW"};
+var styles$a = {"scrollWrapper":"_2k9Ys","scroll":"_19jgW"};
 
 var HorizontalScroll = function HorizontalScroll(_ref) {
   var scroll = _ref.scroll,
@@ -2314,7 +2329,9 @@ var Gantt = function Gantt(_ref) {
       _ref$arrowIndent = _ref.arrowIndent,
       arrowIndent = _ref$arrowIndent === void 0 ? 20 : _ref$arrowIndent,
       _ref$todayColor = _ref.todayColor,
-      todayColor = _ref$todayColor === void 0 ? "rgba(252, 248, 227, 0.5)" : _ref$todayColor,
+      todayColor = _ref$todayColor === void 0 ? "rgba(252, 248, 227, 1)" : _ref$todayColor,
+      _ref$weekendColor = _ref.weekendColor,
+      weekendColor = _ref$weekendColor === void 0 ? "transparent" : _ref$weekendColor,
       viewDate = _ref.viewDate,
       _ref$TooltipContent = _ref.TooltipContent,
       TooltipContent = _ref$TooltipContent === void 0 ? StandardTooltipContent : _ref$TooltipContent,
@@ -2648,6 +2665,7 @@ var Gantt = function Gantt(_ref) {
     rowHeight: rowHeight,
     dates: dateSetup.dates,
     todayColor: todayColor,
+    weekendColor: weekendColor,
     rtl: rtl
   };
   var calendarProps = {

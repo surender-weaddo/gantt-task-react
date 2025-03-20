@@ -7,6 +7,7 @@ export declare type GridBodyProps = {
     rowHeight: number;
     columnWidth: number;
     todayColor: string;
+    weekendColor: string;
     rtl: boolean;
 };
 export declare const GridBody: React.FC<GridBodyProps>;
