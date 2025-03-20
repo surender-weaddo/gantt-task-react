@@ -755,7 +755,7 @@ var Calendar = function Calendar(_ref) {
         y: headerHeight * 0.8,
         x: columnWidth * i + columnWidth * 0.5,
         className: styles$5.calendarBottomText
-      }, bottomValue));
+      }, "1-", bottomValue));
 
       if (i === 0 || date.getFullYear() !== dateSetup.dates[i - 1].getFullYear()) {
         var topValue = date.getFullYear().toString();
@@ -795,7 +795,7 @@ var Calendar = function Calendar(_ref) {
         y: headerHeight * 0.8,
         x: columnWidth * i + columnWidth * 0.5,
         className: styles$5.calendarBottomText
-      }, quarter));
+      }, "2-", quarter));
 
       if (i === 0 || date.getFullYear() !== dateSetup.dates[i - 1].getFullYear()) {
         var topValue = date.getFullYear().toString();
@@ -835,7 +835,7 @@ var Calendar = function Calendar(_ref) {
         y: headerHeight * 0.8,
         x: columnWidth * i + columnWidth * 0.5,
         className: styles$5.calendarBottomText
-      }, bottomValue));
+      }, "3-", bottomValue));
 
       if (i === 0 || date.getFullYear() !== dateSetup.dates[i - 1].getFullYear()) {
         var topValue = date.getFullYear().toString();
@@ -883,7 +883,7 @@ var Calendar = function Calendar(_ref) {
         y: headerHeight * 0.8,
         x: columnWidth * (i + +rtl),
         className: styles$5.calendarBottomText
-      }, bottomValue));
+      }, "4-", bottomValue));
 
       if (topValue) {
         if (i !== dates.length - 1) {
@@ -921,7 +921,7 @@ var Calendar = function Calendar(_ref) {
         y: headerHeight * 0.8,
         x: columnWidth * i + columnWidth * 0.5,
         className: styles$5.calendarBottomText
-      }, bottomValue));
+      }, React__default.createElement("span", null, "5-", bottomValue)));
 
       if (i + 1 !== dates.length && date.getMonth() !== dates[i + 1].getMonth()) {
         var topValue = getLocaleMonth(date, locale);
@@ -958,7 +958,7 @@ var Calendar = function Calendar(_ref) {
         x: columnWidth * (i + +rtl),
         className: styles$5.calendarBottomText,
         fontFamily: fontFamily
-      }, bottomValue));
+      }, "6-", bottomValue));
 
       if (i === 0 || date.getDate() !== dates[i - 1].getDate()) {
         var topValue = getLocalDayOfWeek(date, locale, "short") + ", " + date.getDate() + " " + getLocaleMonth(date, locale);
@@ -994,7 +994,7 @@ var Calendar = function Calendar(_ref) {
         x: columnWidth * (i + +rtl),
         className: styles$5.calendarBottomText,
         fontFamily: fontFamily
-      }, bottomValue));
+      }, "7-", bottomValue));
 
       if (i !== 0 && date.getDate() !== dates[i - 1].getDate()) {
         var displayDate = dates[i - 1];
