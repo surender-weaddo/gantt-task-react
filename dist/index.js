@@ -919,10 +919,16 @@ var Calendar = function Calendar(_ref) {
       var dayValue = date.getDate().toString();
       bottomValues.push(React__default.createElement("text", {
         key: date.getTime(),
-        y: headerHeight * 2,
+        y: headerHeight * 0.4,
         x: columnWidth * i + columnWidth * 0.5,
         className: styles$5.calendarBottomText
-      }, monthValue, " ", React__default.createElement("br", null), " ", dayValue));
+      }, monthValue));
+      bottomValues.push(React__default.createElement("text", {
+        key: date.getTime(),
+        y: headerHeight * 0.8,
+        x: columnWidth * i + columnWidth * 0.5,
+        className: styles$5.calendarBottomText
+      }, dayValue));
 
       if (i + 1 !== dates.length && date.getMonth() !== dates[i + 1].getMonth()) {
         var topValue = getLocaleMonth(date, locale);

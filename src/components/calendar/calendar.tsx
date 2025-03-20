@@ -234,11 +234,22 @@ export const Calendar: React.FC<CalendarProps> = ({
       bottomValues.push(
         <text
           key={date.getTime()}
-          y={headerHeight * 2}
+          y={headerHeight * 0.4}
           x={columnWidth * i + columnWidth * 0.5}
           className={styles.calendarBottomText}
         >
-          {monthValue} <br/> {dayValue}
+          {monthValue}
+        </text>
+      );
+
+      bottomValues.push(
+        <text
+          key={date.getTime()}
+          y={headerHeight * 0.8}
+          x={columnWidth * i + columnWidth * 0.5}
+          className={styles.calendarBottomText}
+        >
+         {dayValue}
         </text>
       );
       if (
