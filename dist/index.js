@@ -919,7 +919,7 @@ var Calendar = function Calendar(_ref) {
       var dayValue = date.getDate().toString();
       bottomValues.push(React__default.createElement("text", {
         key: date.getTime(),
-        y: headerHeight * 0.8,
+        y: headerHeight * 2,
         x: columnWidth * i + columnWidth * 0.5,
         className: styles$5.calendarBottomText
       }, monthValue, " ", React__default.createElement("br", null), " ", dayValue));
