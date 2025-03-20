@@ -46,7 +46,7 @@ export const Calendar: React.FC<CalendarProps> = ({
           x={columnWidth * i + columnWidth * 0.5}
           className={styles.calendarBottomText}
         >
-          1-{bottomValue}
+          {bottomValue}
         </text>
       );
       if (
@@ -91,7 +91,7 @@ export const Calendar: React.FC<CalendarProps> = ({
           x={columnWidth * i + columnWidth * 0.5}
           className={styles.calendarBottomText}
         >
-          2-{quarter}
+          {quarter}
         </text>
       );
       if (
@@ -135,7 +135,7 @@ export const Calendar: React.FC<CalendarProps> = ({
           x={columnWidth * i + columnWidth * 0.5}
           className={styles.calendarBottomText}
         >
-          3-{bottomValue}
+          {bottomValue}
         </text>
       );
       if (
@@ -188,7 +188,7 @@ export const Calendar: React.FC<CalendarProps> = ({
           x={columnWidth * (i + +rtl)}
           className={styles.calendarBottomText}
         >
-          4-{bottomValue}
+          {bottomValue}
         </text>
       );
 
@@ -221,7 +221,7 @@ export const Calendar: React.FC<CalendarProps> = ({
     const dates = dateSetup.dates;
     for (let i = 0; i < dates.length; i++) {
       const date = dates[i];
-      const bottomValue = `${getLocalDayOfWeek(date, locale, "short")}, ${date
+      const bottomValue = `${getLocalDayOfWeek(date, locale, "short")} <br/> ${date
         .getDate()
         .toString()}`;
 
@@ -232,7 +232,7 @@ export const Calendar: React.FC<CalendarProps> = ({
           x={columnWidth * i + columnWidth * 0.5}
           className={styles.calendarBottomText}
         >
-          <span>5-{bottomValue}</span>
+          {bottomValue}
         </text>
       );
       if (
@@ -282,7 +282,7 @@ export const Calendar: React.FC<CalendarProps> = ({
           className={styles.calendarBottomText}
           fontFamily={fontFamily}
         >
-          6-{bottomValue}
+          {bottomValue}
         </text>
       );
       if (i === 0 || date.getDate() !== dates[i - 1].getDate()) {
@@ -327,7 +327,7 @@ export const Calendar: React.FC<CalendarProps> = ({
           className={styles.calendarBottomText}
           fontFamily={fontFamily}
         >
-          7-{bottomValue}
+          {bottomValue}
         </text>
       );
       if (i !== 0 && date.getDate() !== dates[i - 1].getDate()) {
