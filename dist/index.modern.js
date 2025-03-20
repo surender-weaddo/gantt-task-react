@@ -914,13 +914,14 @@ var Calendar = function Calendar(_ref) {
 
     for (var i = 0; i < dates.length; i++) {
       var date = dates[i];
-      var bottomValue = getLocalDayOfWeek(date, locale, "short") + " <br/> " + date.getDate().toString();
+      var monthValue = getLocalDayOfWeek(date, locale, "short");
+      var dayValue = date.getDate().toString();
       bottomValues.push(React.createElement("text", {
         key: date.getTime(),
         y: headerHeight * 0.8,
         x: columnWidth * i + columnWidth * 0.5,
         className: styles$5.calendarBottomText
-      }, bottomValue));
+      }, monthValue, " ", React.createElement("br", null), " ", dayValue));
 
       if (i + 1 !== dates.length && date.getMonth() !== dates[i + 1].getMonth()) {
         var topValue = getLocaleMonth(date, locale);
