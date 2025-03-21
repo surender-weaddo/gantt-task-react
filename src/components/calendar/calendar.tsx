@@ -232,7 +232,11 @@ export const Calendar: React.FC<CalendarProps> = ({
           .toString();
 
       bottomValues.push(
-         <g fill="url(#MyGradient)">
+        <foreignObject  
+        y={headerHeight * 0.6}
+        x={columnWidth * i + columnWidth * 0.5}
+        className={styles.calenderTextBg}>
+          <div>
         <text
           key={date.getTime()}
           y={headerHeight * 0.6}
@@ -249,14 +253,8 @@ export const Calendar: React.FC<CalendarProps> = ({
         >
          {dayValue}
         </text>
-       
-        <defs>
-        <linearGradient id="MyGradient">
-          <stop offset="5%" stop-color="#F60" />
-          <stop offset="95%" stop-color="#FF6" />
-        </linearGradient>
-      </defs>
-      </g>
+        </div>
+      </foreignObject>
        
       );
 

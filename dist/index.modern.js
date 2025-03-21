@@ -916,9 +916,11 @@ var Calendar = function Calendar(_ref) {
       var date = dates[i];
       var monthValue = getLocalDayOfWeek(date, locale, "short");
       var dayValue = date.getDate().toString();
-      bottomValues.push(React.createElement("g", {
-        fill: "url(#MyGradient)"
-      }, React.createElement("text", {
+      bottomValues.push(React.createElement("foreignObject", {
+        y: headerHeight * 0.6,
+        x: columnWidth * i + columnWidth * 0.5,
+        className: styles$5.calenderTextBg
+      }, React.createElement("div", null, React.createElement("text", {
         key: date.getTime(),
         y: headerHeight * 0.6,
         x: columnWidth * i + columnWidth * 0.5,
@@ -928,15 +930,7 @@ var Calendar = function Calendar(_ref) {
         y: headerHeight * 0.8,
         x: columnWidth * i + columnWidth * 0.5,
         className: styles$5.calendarBottomText
-      }, dayValue), React.createElement("defs", null, React.createElement("linearGradient", {
-        id: "MyGradient"
-      }, React.createElement("stop", {
-        offset: "5%",
-        "stop-color": "#F60"
-      }), React.createElement("stop", {
-        offset: "95%",
-        "stop-color": "#FF6"
-      })))));
+      }, dayValue))));
 
       if (i + 1 !== dates.length && date.getMonth() !== dates[i + 1].getMonth()) {
         var topValue = getLocaleMonth(date, locale);
