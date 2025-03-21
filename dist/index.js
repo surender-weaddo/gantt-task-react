@@ -976,7 +976,7 @@ var Calendar = function Calendar(_ref) {
           y1Line: 0,
           y2Line: topDefaultHeight,
           xText: columnWidth * i + ticks * columnWidth * 0.5,
-          yText: topDefaultHeight * 0.9
+          yText: topDefaultHeight * 0.5
         }));
       }
     }
