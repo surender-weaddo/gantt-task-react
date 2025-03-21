@@ -232,36 +232,25 @@ export const Calendar: React.FC<CalendarProps> = ({
           .toString();
 
       bottomValues.push(
-        <svg className="svgbg" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-        <text
+        <foreignObject width="100%" height="100%" x={columnWidth * i + columnWidth * 0.5} y={headerHeight * 0.6}>
+          <div className="textbg">
+          <div
           key={date.getTime()}
-          y={headerHeight * 0.6}
-          x={columnWidth * i + columnWidth * 0.5}
+          
           className={styles.calendarBottomText}
         >
           {monthValue}
-        </text>
-        <text
+        </div>
+        <div
           key={date.getTime()}
-          y={headerHeight * 0.8}
-          x={columnWidth * i + columnWidth * 0.5}
+    
           className={styles.calendarBottomText}
         >
          {dayValue}
-        </text>
-        <defs>
-    <linearGradient id="grad1" x1="0%" x2="100%" y1="0%" y2="0%">
-      <stop offset="0%" stop-color="yellow" />
-      <stop offset="100%" stop-color="red" />
-    </linearGradient>
-  </defs>
-  <rect  y={headerHeight * 0.6}
-          x={columnWidth * i + columnWidth * 0.5} 
-          width="85" 
-          height="55" 
-          fill="url(#grad1)" 
-          />
-        </svg>
+        </div>
+        </div>
+      </foreignObject>
+
        
       );
 

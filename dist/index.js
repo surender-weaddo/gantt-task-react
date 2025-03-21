@@ -917,40 +917,20 @@ var Calendar = function Calendar(_ref) {
       var date = dates[i];
       var monthValue = getLocalDayOfWeek(date, locale, "short");
       var dayValue = date.getDate().toString();
-      bottomValues.push(React__default.createElement("svg", {
-        className: "svgbg",
-        xmlns: "http://www.w3.org/2000/svg",
+      bottomValues.push(React__default.createElement("foreignObject", {
         width: "100%",
-        height: "100%"
-      }, React__default.createElement("text", {
+        height: "100%",
+        x: columnWidth * i + columnWidth * 0.5,
+        y: headerHeight * 0.6
+      }, React__default.createElement("div", {
+        className: "textbg"
+      }, React__default.createElement("div", {
         key: date.getTime(),
-        y: headerHeight * 0.6,
-        x: columnWidth * i + columnWidth * 0.5,
         className: styles$5.calendarBottomText
-      }, monthValue), React__default.createElement("text", {
+      }, monthValue), React__default.createElement("div", {
         key: date.getTime(),
-        y: headerHeight * 0.8,
-        x: columnWidth * i + columnWidth * 0.5,
         className: styles$5.calendarBottomText
-      }, dayValue), React__default.createElement("defs", null, React__default.createElement("linearGradient", {
-        id: "grad1",
-        x1: "0%",
-        x2: "100%",
-        y1: "0%",
-        y2: "0%"
-      }, React__default.createElement("stop", {
-        offset: "0%",
-        "stop-color": "yellow"
-      }), React__default.createElement("stop", {
-        offset: "100%",
-        "stop-color": "red"
-      }))), React__default.createElement("rect", {
-        y: headerHeight * 0.6,
-        x: columnWidth * i + columnWidth * 0.5,
-        width: "85",
-        height: "55",
-        fill: "url(#grad1)"
-      })));
+      }, dayValue))));
 
       if (i + 1 !== dates.length && date.getMonth() !== dates[i + 1].getMonth()) {
         var topValue = getLocaleMonth(date, locale);
