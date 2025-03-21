@@ -773,7 +773,7 @@ var Calendar = function Calendar(_ref) {
           y1Line: 0,
           y2Line: headerHeight,
           xText: xText,
-          yText: topDefaultHeight * 0.5
+          yText: topDefaultHeight * 0.6
         }));
       }
     }
@@ -813,7 +813,7 @@ var Calendar = function Calendar(_ref) {
           y1Line: 0,
           y2Line: topDefaultHeight,
           xText: Math.abs(xText),
-          yText: topDefaultHeight * 0.5
+          yText: topDefaultHeight * 0.6
         }));
       }
     }
@@ -853,7 +853,7 @@ var Calendar = function Calendar(_ref) {
           y1Line: 0,
           y2Line: topDefaultHeight,
           xText: xText,
-          yText: topDefaultHeight * 0.5
+          yText: topDefaultHeight * 0.6
         }));
       }
     }
@@ -893,7 +893,7 @@ var Calendar = function Calendar(_ref) {
             y1Line: 0,
             y2Line: topDefaultHeight,
             xText: columnWidth * i + columnWidth * weeksCount * 0.5,
-            yText: topDefaultHeight * 0.5
+            yText: topDefaultHeight * 0.6
           }));
         }
 
@@ -939,7 +939,7 @@ var Calendar = function Calendar(_ref) {
           y1Line: 0,
           y2Line: topDefaultHeight,
           xText: columnWidth * (i + 1) - getDaysInMonth(date.getMonth(), date.getFullYear()) * columnWidth * 0.5,
-          yText: topDefaultHeight * 0.5
+          yText: topDefaultHeight * 0.6
         }));
       }
     }
@@ -976,7 +976,7 @@ var Calendar = function Calendar(_ref) {
           y1Line: 0,
           y2Line: topDefaultHeight,
           xText: columnWidth * i + ticks * columnWidth * 0.5,
-          yText: topDefaultHeight * 0.5
+          yText: topDefaultHeight * 0.6
         }));
       }
     }
@@ -1014,7 +1014,7 @@ var Calendar = function Calendar(_ref) {
           y1Line: 0,
           y2Line: topDefaultHeight,
           xText: columnWidth * (i + topPosition),
-          yText: topDefaultHeight * 0.5
+          yText: topDefaultHeight * 0.6
         }));
       }
     }
