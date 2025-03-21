@@ -232,25 +232,24 @@ export const Calendar: React.FC<CalendarProps> = ({
           .toString();
 
       bottomValues.push(
-        <foreignObject width="100%" height="100%" x={columnWidth * i + columnWidth * 0.6} y={headerHeight * 0.4}>
-          <div className="textbg">
-          <div
+        <svg className="svgbg" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+        <text
           key={date.getTime()}
-          
+          y={headerHeight * 0.6}
+          x={columnWidth * i + columnWidth * 0.5}
           className={styles.calendarBottomText}
         >
           {monthValue}
-        </div>
-        <div
+        </text>
+        <text
           key={date.getTime()}
-    
+          y={headerHeight * 0.8}
+          x={columnWidth * i + columnWidth * 0.5}
           className={styles.calendarBottomText}
         >
          {dayValue}
-        </div>
-        </div>
-      </foreignObject>
-
+        </text>
+        </svg>
        
       );
 

@@ -916,20 +916,22 @@ var Calendar = function Calendar(_ref) {
       var date = dates[i];
       var monthValue = getLocalDayOfWeek(date, locale, "short");
       var dayValue = date.getDate().toString();
-      bottomValues.push(React.createElement("foreignObject", {
+      bottomValues.push(React.createElement("svg", {
+        className: "svgbg",
+        xmlns: "http://www.w3.org/2000/svg",
         width: "100%",
-        height: "100%",
-        x: columnWidth * i + columnWidth * 0.6,
-        y: headerHeight * 0.4
-      }, React.createElement("div", {
-        className: "textbg"
-      }, React.createElement("div", {
+        height: "100%"
+      }, React.createElement("text", {
         key: date.getTime(),
+        y: headerHeight * 0.6,
+        x: columnWidth * i + columnWidth * 0.5,
         className: styles$5.calendarBottomText
-      }, monthValue), React.createElement("div", {
+      }, monthValue), React.createElement("text", {
         key: date.getTime(),
+        y: headerHeight * 0.8,
+        x: columnWidth * i + columnWidth * 0.5,
         className: styles$5.calendarBottomText
-      }, dayValue))));
+      }, dayValue)));
 
       if (i + 1 !== dates.length && date.getMonth() !== dates[i + 1].getMonth()) {
         var topValue = getLocaleMonth(date, locale);
