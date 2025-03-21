@@ -920,7 +920,7 @@ var Calendar = function Calendar(_ref) {
       bottomValues.push(React__default.createElement("foreignObject", {
         width: "100%",
         height: "100%",
-        x: columnWidth * i + columnWidth * 0.5,
+        x: columnWidth * i + columnWidth * 0.6,
         y: headerHeight * 0.4
       }, React__default.createElement("div", {
         className: "textbg"
