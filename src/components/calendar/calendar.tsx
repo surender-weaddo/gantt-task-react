@@ -61,7 +61,7 @@ export const Calendar: React.FC<CalendarProps> = ({
           xText = (6 + i - date.getFullYear()) * columnWidth;
         }
         topValues.push(
-          <TopPartOfCalendar
+          <>7-<TopPartOfCalendar
             key={topValue}
             value={topValue}
             x1Line={columnWidth * i}
@@ -69,7 +69,7 @@ export const Calendar: React.FC<CalendarProps> = ({
             y2Line={headerHeight}
             xText={xText}
             yText={topDefaultHeight * 0.9}
-          />
+          /></>
         );
       }
     }
@@ -106,7 +106,7 @@ export const Calendar: React.FC<CalendarProps> = ({
           xText = (6 + i - date.getMonth()) * columnWidth;
         }
         topValues.push(
-          <TopPartOfCalendar
+          <>6- <TopPartOfCalendar
             key={topValue}
             value={topValue}
             x1Line={columnWidth * i}
@@ -114,7 +114,7 @@ export const Calendar: React.FC<CalendarProps> = ({
             y2Line={topDefaultHeight}
             xText={Math.abs(xText)}
             yText={topDefaultHeight * 0.9}
-          />
+          /></>
         );
       }
     }
@@ -150,7 +150,7 @@ export const Calendar: React.FC<CalendarProps> = ({
           xText = (6 + i - date.getMonth()) * columnWidth;
         }
         topValues.push(
-          <TopPartOfCalendar
+          <>5-<TopPartOfCalendar
             key={topValue}
             value={topValue}
             x1Line={columnWidth * i}
@@ -159,6 +159,7 @@ export const Calendar: React.FC<CalendarProps> = ({
             xText={xText}
             yText={topDefaultHeight * 0.9}
           />
+          </>
         );
       }
     }
@@ -196,7 +197,7 @@ export const Calendar: React.FC<CalendarProps> = ({
         // if last day is new month
         if (i !== dates.length - 1) {
           topValues.push(
-            <TopPartOfCalendar
+            <>4- <TopPartOfCalendar
               key={topValue}
               value={topValue}
               x1Line={columnWidth * i + weeksCount * columnWidth}
@@ -204,7 +205,7 @@ export const Calendar: React.FC<CalendarProps> = ({
               y2Line={topDefaultHeight}
               xText={columnWidth * i + columnWidth * weeksCount * 0.5}
               yText={topDefaultHeight * 0.7}
-            />
+            /></>
           );
         }
         weeksCount = 0;
@@ -259,7 +260,7 @@ export const Calendar: React.FC<CalendarProps> = ({
         const topValue = getLocaleMonth(date, locale);
 
         topValues.push(
-          <TopPartOfCalendar
+          <>2- <TopPartOfCalendar
             key={topValue + date.getFullYear()}
             value={topValue}
             x1Line={columnWidth * (i + 1)}
@@ -272,7 +273,7 @@ export const Calendar: React.FC<CalendarProps> = ({
                 0.5
             }
             yText={topDefaultHeight * 0.9}
-          />
+          /></>
         );
       }
     }
@@ -309,15 +310,15 @@ export const Calendar: React.FC<CalendarProps> = ({
           "short"
         )}, ${date.getDate()} ${getLocaleMonth(date, locale)}`;
         topValues.push(
-          <TopPartOfCalendar
+          <>1-<TopPartOfCalendar
             key={topValue + date.getFullYear()}
             value={topValue}
             x1Line={columnWidth * i + ticks * columnWidth}
             y1Line={0}
             y2Line={topDefaultHeight}
             xText={columnWidth * i + ticks * columnWidth * 0.5}
-            yText={topDefaultHeight * 0.5}
-          />
+            yText={topDefaultHeight * 0.9}
+          /></>
         );
       }
     }
@@ -356,7 +357,7 @@ export const Calendar: React.FC<CalendarProps> = ({
         )}, ${displayDate.getDate()} ${getLocaleMonth(displayDate, locale)}`;
         const topPosition = (date.getHours() - 24) / 2;
         topValues.push(
-          <TopPartOfCalendar
+          <>3-<TopPartOfCalendar
             key={topValue + displayDate.getFullYear()}
             value={topValue}
             x1Line={columnWidth * i}
@@ -364,7 +365,7 @@ export const Calendar: React.FC<CalendarProps> = ({
             y2Line={topDefaultHeight}
             xText={columnWidth * (i + topPosition)}
             yText={topDefaultHeight * 0.9}
-          />
+          /></>
         );
       }
     }
