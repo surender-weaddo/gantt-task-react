@@ -232,7 +232,7 @@ export const Calendar: React.FC<CalendarProps> = ({
           .toString();
 
       bottomValues.push(
-        <foreignObject width="100%" height="100%" x={columnWidth * i + columnWidth * 0.5} y={headerHeight * 0.4}>
+        <foreignObject width="100%" height="100%" x={columnWidth * i + columnWidth * 0.6} y={headerHeight * 0.4}>
           <div className="textbg">
           <div
           key={date.getTime()}
