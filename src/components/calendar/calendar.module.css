@@ -25,9 +25,16 @@
   pointer-events: none;
 }
 
-
 .calendarHeader {
-  fill: #ffffff;
+  fill: #f5f5f5;
+  stroke: #e0e0e0;
+  stroke-width: 1.4;
+} 
+
+.svgbg {
+  fill: #f5f5f5;
   stroke: #e0e0e0;
   stroke-width: 1.4;
 }
+
+

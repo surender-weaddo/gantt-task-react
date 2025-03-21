@@ -169,12 +169,19 @@
   pointer-events: none;
 }
 
-
 ._35nLX {
-  fill: #ffffff;
+  fill: #f5f5f5;
+  stroke: #e0e0e0;
+  stroke-width: 1.4;
+} 
+
+._AXCwn {
+  fill: #f5f5f5;
   stroke: #e0e0e0;
   stroke-width: 1.4;
 }
+
+
 
 ._KxSXS {
   cursor: pointer;
