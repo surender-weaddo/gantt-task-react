@@ -232,11 +232,7 @@ export const Calendar: React.FC<CalendarProps> = ({
           .toString();
 
       bottomValues.push(
-        <foreignObject  
-        y={headerHeight * 0.6}
-        x={columnWidth * i + columnWidth * 0.5}
-        className={styles.calenderTextBg}>
-          <div>
+        <svg>
         <text
           key={date.getTime()}
           y={headerHeight * 0.6}
@@ -253,8 +249,7 @@ export const Calendar: React.FC<CalendarProps> = ({
         >
          {dayValue}
         </text>
-        </div>
-      </foreignObject>
+        </svg>
        
       );
 
