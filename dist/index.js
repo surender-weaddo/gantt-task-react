@@ -917,7 +917,12 @@ var Calendar = function Calendar(_ref) {
       var date = dates[i];
       var monthValue = getLocalDayOfWeek(date, locale, "short");
       var dayValue = date.getDate().toString();
-      bottomValues.push(React__default.createElement("svg", null, React__default.createElement("text", {
+      bottomValues.push(React__default.createElement("svg", {
+        className: "svgbg",
+        xmlns: "http://www.w3.org/2000/svg",
+        width: "100%",
+        height: "100%"
+      }, React__default.createElement("text", {
         key: date.getTime(),
         y: headerHeight * 0.6,
         x: columnWidth * i + columnWidth * 0.5,
