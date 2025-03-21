@@ -932,7 +932,25 @@ var Calendar = function Calendar(_ref) {
         y: headerHeight * 0.8,
         x: columnWidth * i + columnWidth * 0.5,
         className: styles$5.calendarBottomText
-      }, dayValue)));
+      }, dayValue), React__default.createElement("defs", null, React__default.createElement("linearGradient", {
+        id: "grad1",
+        x1: "0%",
+        x2: "100%",
+        y1: "0%",
+        y2: "0%"
+      }, React__default.createElement("stop", {
+        offset: "0%",
+        "stop-color": "yellow"
+      }), React__default.createElement("stop", {
+        offset: "100%",
+        "stop-color": "red"
+      }))), React__default.createElement("rect", {
+        y: headerHeight * 0.6,
+        x: columnWidth * i + columnWidth * 0.5,
+        width: "85",
+        height: "55",
+        fill: "url(#grad1)"
+      })));
 
       if (i + 1 !== dates.length && date.getMonth() !== dates[i + 1].getMonth()) {
         var topValue = getLocaleMonth(date, locale);

@@ -249,6 +249,18 @@ export const Calendar: React.FC<CalendarProps> = ({
         >
          {dayValue}
         </text>
+        <defs>
+    <linearGradient id="grad1" x1="0%" x2="100%" y1="0%" y2="0%">
+      <stop offset="0%" stop-color="yellow" />
+      <stop offset="100%" stop-color="red" />
+    </linearGradient>
+  </defs>
+  <rect  y={headerHeight * 0.6}
+          x={columnWidth * i + columnWidth * 0.5} 
+          width="85" 
+          height="55" 
+          fill="url(#grad1)" 
+          />
         </svg>
        
       );
