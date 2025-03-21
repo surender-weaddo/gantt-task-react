@@ -705,7 +705,7 @@ var Grid = function Grid(props) {
   }, React.createElement(GridBody, Object.assign({}, props)));
 };
 
-var styles$5 = {"calendarBottomText":"_9w8d5","calendarTopTick":"_1rLuZ","calendarTopText":"_2q1Kt","calendarTextBg":"_3_z_F","calendarHeader":"_35nLX"};
+var styles$5 = {"calendarBottomText":"_9w8d5","calendarTopTick":"_1rLuZ","calendarTopText":"_2q1Kt","calendarHeader":"_35nLX"};
 
 var TopPartOfCalendar = function TopPartOfCalendar(_ref) {
   var value = _ref.value,
@@ -917,10 +917,8 @@ var Calendar = function Calendar(_ref) {
       var monthValue = getLocalDayOfWeek(date, locale, "short");
       var dayValue = date.getDate().toString();
       bottomValues.push(React.createElement("foreignObject", {
-        width: "100%",
-        height: "100%",
         x: columnWidth * i + columnWidth * 0.5,
-        y: headerHeight * 0.6
+        y: headerHeight * 0.4
       }, React.createElement("div", {
         className: "textbg"
       }, React.createElement("div", {

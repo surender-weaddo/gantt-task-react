@@ -24,9 +24,7 @@
   user-select: none;
   pointer-events: none;
 }
-.calendarTextBg {
-  background-color: aqua;
-}
+
 
 .calendarHeader {
   fill: #ffffff;
