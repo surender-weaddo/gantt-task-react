@@ -917,6 +917,8 @@ var Calendar = function Calendar(_ref) {
       var monthValue = getLocalDayOfWeek(date, locale, "short");
       var dayValue = date.getDate().toString();
       bottomValues.push(React.createElement("foreignObject", {
+        width: "100%",
+        height: "100%",
         x: columnWidth * i + columnWidth * 0.5,
         y: headerHeight * 0.4
       }, React.createElement("div", {
