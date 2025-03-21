@@ -232,6 +232,7 @@ export const Calendar: React.FC<CalendarProps> = ({
           .toString();
 
       bottomValues.push(
+        <g className={styles.calendarTextBg}>
         <text
           key={date.getTime()}
           y={headerHeight * 0.6}
@@ -240,9 +241,6 @@ export const Calendar: React.FC<CalendarProps> = ({
         >
           {monthValue}
         </text>
-      );
-
-      bottomValues.push(
         <text
           key={date.getTime()}
           y={headerHeight * 0.8}
@@ -251,7 +249,10 @@ export const Calendar: React.FC<CalendarProps> = ({
         >
          {dayValue}
         </text>
+        </g>
       );
+
+     
       if (
         i + 1 !== dates.length &&
         date.getMonth() !== dates[i + 1].getMonth()
