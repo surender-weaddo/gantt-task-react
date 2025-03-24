@@ -19,3 +19,6 @@
   outline: none;
   position: relative;
 }
+.weekends rect {
+  fill: url(#diagonalHatch);
+}
