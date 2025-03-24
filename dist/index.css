@@ -285,6 +285,9 @@
   outline: none;
   position: relative;
 }
+._i9dIA rect {
+  fill: url(#diagonalHatch);
+}
 
 ._2k9Ys {
   overflow: auto;

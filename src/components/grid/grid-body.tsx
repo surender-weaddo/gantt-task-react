@@ -78,7 +78,7 @@ export const GridBody: React.FC<GridBodyProps> = ({
     );
     if (weekendColor !== "transparent" && dates[i + 1] && [0,6].includes(dates[i + 1].getDay())) {
       weekends.push(
-        <>
+       
         <rect
           key={"WeekendColumn" + i}
           x={tickX + columnWidth}
@@ -87,15 +87,8 @@ export const GridBody: React.FC<GridBodyProps> = ({
           height={y}
           fill={weekendColor}
         />
-        <defs>
-    <pattern id="diagonalHatch" patternUnits="userSpaceOnUse" width="10" height="10">
-      <path d="M-1,1 l2,-2 M0,10 l10,-10 M9,11 l2,-2" 
-            stroke="#000000" 
-            stroke-width="1" 
-            stroke-opacity="0.2"/>
-    </pattern>
-  </defs>
-  </>
+      
+ 
       );
     }
     if (
@@ -142,7 +135,15 @@ export const GridBody: React.FC<GridBodyProps> = ({
     tickX += columnWidth;
   }
   return (
-    <g className="gridBody">
+    <g className="gridBody">  
+      <defs>
+    <pattern id="diagonalHatch" patternUnits="userSpaceOnUse" width="10" height="10">
+      <path d="M-1,1 l2,-2 M0,10 l10,-10 M9,11 l2,-2" 
+            stroke="#000000" 
+            stroke-width="1" 
+            stroke-opacity="0.2"/>
+    </pattern>
+    </defs>
       <g className="rows">{gridRows}</g>
       <g className="rowLines">{rowLines}</g>
       <g className="ticks">{ticks}</g>

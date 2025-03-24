@@ -686,7 +686,17 @@ var GridBody = function GridBody(_ref) {
 
   return React.createElement("g", {
     className: "gridBody"
-  }, React.createElement("g", {
+  }, React.createElement("defs", null, React.createElement("pattern", {
+    id: "diagonalHatch",
+    patternUnits: "userSpaceOnUse",
+    width: "10",
+    height: "10"
+  }, React.createElement("path", {
+    d: "M-1,1 l2,-2 M0,10 l10,-10 M9,11 l2,-2",
+    stroke: "#000000",
+    "stroke-width": "1",
+    "stroke-opacity": "0.2"
+  }))), React.createElement("g", {
     className: "rows"
   }, gridRows), React.createElement("g", {
     className: "rowLines"
@@ -2198,7 +2208,7 @@ var TaskGanttContent = function TaskGanttContent(_ref) {
   })));
 };
 
-var styles$9 = {"ganttVerticalContainer":"_CZjuD","horizontalContainer":"_2B2zv","wrapper":"_3eULf"};
+var styles$9 = {"ganttVerticalContainer":"_CZjuD","horizontalContainer":"_2B2zv","wrapper":"_3eULf","weekends":"_i9dIA"};
 
 var TaskGantt = function TaskGantt(_ref) {
   var gridProps = _ref.gridProps,
